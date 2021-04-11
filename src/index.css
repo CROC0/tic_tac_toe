@@ -88,7 +88,8 @@ img {
   height: 80%;
 }
 .icon {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Merienda One', cursive;
+
   font-size: 7rem;
   font-weight: 800;
 }
@@ -110,6 +111,7 @@ img {
 .name-form {
   display: flex;
   flex-direction: column;
+  margin-bottom: 10px;
 }
 
 .name-input {

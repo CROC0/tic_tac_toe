@@ -27,9 +27,6 @@ const Info = ({ player }) => {
         />
       </h3>
 
-      <p>
-        Score: <strong>{player.wins}</strong>
-      </p>
       <div className={`name-form${hidden ? ' hidden' : ''}`}>
         <input
           type='text'
@@ -44,6 +41,16 @@ const Info = ({ player }) => {
           Change Name
         </button>
       </div>
+
+      <p>
+        Score: <strong>{player.wins}</strong>
+      </p>
+
+      {player.index === 1 ? (
+        <p className='icon'>X</p>
+      ) : player.index === 2 ? (
+        <p className='icon'>O</p>
+      ) : null}
     </div>
   );
 };
