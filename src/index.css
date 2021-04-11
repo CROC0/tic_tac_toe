@@ -6,7 +6,7 @@
 
 :root {
   --dark-primary-color: #303f9f;
-  --default-primary-colo: #3f51b5;
+  --default-primary-color: #3f51b5;
   --light-primary-color: #c5cae9;
   --text-primary-color: #ffffff;
   --accent-color: #00bcd4;
@@ -58,8 +58,8 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  width: 80vmin;
-  height: 80vmin;
+  width: 70vmin;
+  height: 70vmin;
 }
 
 .square {
@@ -145,6 +145,25 @@ img {
 
 .logo {
   fill: var(--text-primary-color);
+}
+
+.footer {
+  width: 100vw;
+  height: 45px;
+  background-color: var(--primary-text-color);
+  color: var(--light-primary-color);
+  font-size: 0.8rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-left: 20px;
+
+  display: flex;
+  align-items: center;
+}
+
+.footer a {
+  color: var(--light-primary-color);
 }
 
 .btn {
