@@ -17,7 +17,13 @@ const Board = () => {
       <div className='board'>
         {game &&
           game.boardState.map((state, index) => (
-            <Square key={`square_${index}`} state={state} index={index} handleMove={handleMove} />
+            <Square
+              key={`square_${index}`}
+              state={state}
+              index={index}
+              handleMove={handleMove}
+              win={game.winCondition.includes(index)}
+            />
           ))}
       </div>
     </>

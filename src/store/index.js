@@ -8,6 +8,7 @@ import {
   actionMakeWinner,
   actionResetGame,
   actionChangeName,
+  actionSetWinCondition,
 } from './actions';
 
 export default createStore({
@@ -26,6 +27,7 @@ export default createStore({
 
     activeGame: true,
     winner: null,
+    winCondition: [],
 
     boardState: [0, 0, 0, 0, 0, 0, 0, 0, 0],
     player: 1,
@@ -38,4 +40,5 @@ export default createStore({
   makeWinner: action(actionMakeWinner),
   resetGame: action(actionResetGame),
   changeName: action(actionChangeName),
+  setWinCondition: action(actionSetWinCondition),
 });

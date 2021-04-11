@@ -18,10 +18,12 @@ function checkWinner(state) {
     if (first === second && second === third && first === third) {
       if (first !== 0) {
         console.log('winner');
-        return first;
+        return { winner: first, winCondition: winConditions[i] };
       }
     }
   }
+
+  return { winner: null, winConditions: null };
 }
 
 export default checkWinner;

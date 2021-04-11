@@ -52,6 +52,9 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
+
+  color: var(--primary-text-color);
+  font-size: 1.5rem;
 }
 
 .board {
@@ -70,6 +73,14 @@ body {
   background-color: #fff;
 
   cursor: pointer;
+}
+
+.square:hover {
+  background-color: var(--divider-color);
+}
+
+.winning-square {
+  background-color: rgba(255, 0, 0, 0.6);
 }
 
 img {

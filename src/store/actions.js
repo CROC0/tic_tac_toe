@@ -5,6 +5,7 @@ export function actionResetGame(state) {
   state.game.activeGame = true;
   state.game.player = state.game.lastStartingPlayer;
   state.game.lastStartingPlayer = state.game.lastStartingPlayer === 1 ? 2 : 1;
+  state.game.winCondition = [];
 }
 
 export function actionMakeWinner(state, winner) {
@@ -20,10 +21,10 @@ export function thunkCheckWinner(actions, _, helpers) {
   const { game } = helpers.getState();
   if (!game.activeGame) return;
 
-  const winningPlayer = checkWinner(game.boardState);
-
-  if (winningPlayer) {
-    actions.makeWinner(winningPlayer);
+  const { winner, winCondition } = checkWinner(game.boardState);
+  if (winner) {
+    actions.makeWinner(winner);
+    actions.setWinCondition(winCondition);
   }
 }
 
@@ -46,4 +47,8 @@ export function actionChangeName(state, payload) {
   } else {
     state.game.playerTwo.name = payload.name;
   }
+}
+
+export function actionSetWinCondition(state, winCondition) {
+  state.game.winCondition = winCondition;
 }

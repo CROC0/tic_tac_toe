@@ -27,7 +27,9 @@ const Info = ({ player }) => {
         />
       </h3>
 
-      <p>Score: {player.wins}</p>
+      <p>
+        Score: <strong>{player.wins}</strong>
+      </p>
       <div className={`name-form${hidden ? ' hidden' : ''}`}>
         <input
           type='text'

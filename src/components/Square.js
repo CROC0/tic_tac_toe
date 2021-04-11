@@ -1,4 +1,4 @@
-const Square = ({ state, index, handleMove }) => {
+const Square = ({ state, index, handleMove, win }) => {
   function startHandleMove() {
     if (state === 0) {
       handleMove(index);
@@ -6,7 +6,7 @@ const Square = ({ state, index, handleMove }) => {
   }
 
   return (
-    <div className='square' onClick={startHandleMove}>
+    <div className={`square ${win && 'winning-square'}`} onClick={startHandleMove}>
       {state === 1 ? <p className='icon'>X</p> : state === 2 ? <p className='icon'>O</p> : null}
     </div>
   );
