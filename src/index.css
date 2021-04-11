@@ -68,6 +68,8 @@ body {
   align-items: center;
   border: 1px var(--divider-color) solid;
   background-color: #fff;
+
+  cursor: pointer;
 }
 
 img {
